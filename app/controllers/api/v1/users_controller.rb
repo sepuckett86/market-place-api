@@ -2,7 +2,7 @@ class Api::V1::UsersController < ApplicationController
   before_action :set_user, only: %i[show update destroy]
   
   def show
-    render json: User.find(params[:id])
+    render json: @user
   end
 
   def create
